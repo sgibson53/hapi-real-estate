@@ -1,0 +1,14 @@
+{
+  "name": "hapi-real-estate",
+  "version": "1.0.0",
+  "description": "Full Production website for Hapi Real Estate",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "express": "^4.13.3",
+    "mongodb": "^2.1.6"
+  }
+}
