@@ -5,7 +5,7 @@ export default class App extends React.Component {
     console.log("Rendering App Component");
     return (
       <div>
-        Hello World
+        {this.props.children}
       </div>
     );
   }
