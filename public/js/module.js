@@ -25447,7 +25447,7 @@
 	      return _react2.default.createElement(
 	        'div',
 	        null,
-	        'Hello World'
+	        'Hello, Hapi Real Estate! We are going to build you.., welcome, Sophie!'
 	      );
 	    }
 	  }]);

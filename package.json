@@ -11,7 +11,10 @@
     "start": "node server.js"
   },
   "babel": {
-    "presets": ["es2015", "react"]
+    "presets": [
+      "es2015",
+      "react"
+    ]
   },
   "engines": {
     "node": "4.1.1"
@@ -42,5 +45,9 @@
     "socket.io": "^1.4.8",
     "webpack": "^1.12.12",
     "webpack-stream": "^3.1.0"
+  },
+  "devDependencies": {
+    "gulp-livereload": "^3.8.1",
+    "gulp-load-plugins": "^1.2.4"
   }
 }

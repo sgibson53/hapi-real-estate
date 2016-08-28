@@ -9,7 +9,7 @@ export default class Home extends React.Component {
   render() {
     return (
       <div>
-        Hello World
+        Hello, Hapi Real Estate! We are going to build you.., welcome, Sophie!
       </div>
     );
   }

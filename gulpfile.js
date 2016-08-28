@@ -4,6 +4,10 @@ var autoprefixer = require('gulp-autoprefixer');
 var webpack = require('webpack-stream');
 var rename = require('gulp-rename');
 var sourcemaps = require('gulp-sourcemaps');
+var spawn = require('child_process').spawn;
+var plugins = require('gulp-load-plugins')();
+plugins.livereload = ('gulp-livereload');
+var node;
 
 
 gulp.task('sass', function () {
@@ -16,7 +20,8 @@ gulp.task('sass', function () {
 				browsers: ['last 2 iOS versions'],
 				cascade: false
 		 }))
-		.pipe(gulp.dest('./public/css'));
+		.pipe(gulp.dest('./public/css'))
+		.pipe(plugins.livereload());
 
 });
 
@@ -27,9 +32,37 @@ gulp.task('webpack', function () {
 		  .on('error', function(e) {
 				console.log(e.message);
 		  })
-		  .pipe(gulp.dest('./public/js/'));
+		  .pipe(gulp.dest('./public/js/'))
+			.pipe(plugins.livereload());
 
 });
+
+gulp.task('server', function() {
+	if (node) node.kill();
+	node = spawn('node', ['server.js'], {stdio: 'inherit'});
+	node.on('close', function (code) {
+	  if (code === 8) {
+	    gulp.log('Error detected, waiting for changes...');
+	  }
+	});
+});
+
+gulp.task('default', function() {
+	plugins.livereload.listen();
+
+  gulp.run('server');
+
+	gulp.watch('./src/sass/styles.scss', ['sass'], function() {
+		gulp.run('server');
+	});
+	gulp.watch('./src/**/*.js', ['webpack'], function() {
+		gulp.run('server');
+	});
+  gulp.watch('./src/*.js', ['webpack'], function() {
+		gulp.run('server');
+	});
+});
+
 
 gulp.task('watch', ['sass','webpack'], function () {
 	gulp.watch('./src/sass/styles.scss', ['sass']);
