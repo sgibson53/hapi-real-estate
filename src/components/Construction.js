@@ -10,7 +10,7 @@ export default class Construction extends React.Component {
     return (
       <div className="construction-wrapper">
         <div className="construction-banner">
-          <span>Site currently under construction. Please chack back soon! <br /> Stay Hapi</span>
+          <span>Site currently under construction. Please check back soon! <br /> Stay Hapi</span>
         </div>
       </div>
     );
