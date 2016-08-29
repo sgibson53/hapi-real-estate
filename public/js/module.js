@@ -25506,7 +25506,7 @@
 	          _react2.default.createElement(
 	            "span",
 	            null,
-	            "Site currently under construction. Please chack back soon! ",
+	            "Site currently under construction.",
 	            _react2.default.createElement("br", null),
 	            " Stay Hapi"
 	          )
