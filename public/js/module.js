@@ -25359,7 +25359,10 @@
 	exports.default = _react2.default.createElement(
 	  _reactRouter.Route,
 	  { component: _App2.default },
-	  _react2.default.createElement(_reactRouter.Route, { path: '/', component: _Construction2.default })
+	  _react2.default.createElement(_reactRouter.Redirect, { from: '/', to: '/construction' }),
+	  _react2.default.createElement(_reactRouter.Route, { path: '/construction', component: _Construction2.default }),
+	  _react2.default.createElement(_reactRouter.Redirect, { from: '/beta', to: '/home', component: _Home2.default }),
+	  _react2.default.createElement(_reactRouter.Route, { path: '/home', component: _Home2.default })
 	);
 
 /***/ },

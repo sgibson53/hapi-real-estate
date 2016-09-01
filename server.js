@@ -1,7 +1,7 @@
 var express = require("express");
 var path = require("path");
 var bodyParser = require("body-parser");
-var mongodb = require("mongodb"); 
+var mongodb = require("mongodb");
 
 var CONTACTS_COLLECTION = "collection";
 
@@ -22,21 +22,21 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // Create a database variable outside of the database connection callback to reuse the connection pool in your app.
 var db;
 
-app.use(function(req, res) {
-  Router.match({ routes: routes.default, location: req.url }, function(err, redirectLocation, renderProps) {
-    if (err) {
-      res.status(500).send(err.message);
-    } else if (redirectLocation) {
-      res.status(302).redirect(redirectLocation.pathname + redirectLocation.search);
-    } else if (renderProps) {
-      var html = ReactDOM.renderToString(React.createElement(Router.RoutingContext, renderProps));
-      var page = swig.renderFile('views/index.html', { html: html });
-      res.status(200).send(page);
-    } else {
-      res.status(404).send('Page Not Found');
-    }
-  });
-});
+// app.use(function(req, res) {
+//   Router.match({ routes: routes.default, location: req.url }, function(err, redirectLocation, renderProps) {
+//     if (err) {
+//       res.status(500).send(err.message);
+//     } else if (redirectLocation) {
+//       res.status(302).redirect(redirectLocation.pathname + redirectLocation.search);
+//     } else if (renderProps) {
+//       var html = ReactDOM.renderToString(React.createElement(Router.RoutingContext, renderProps));
+//       var page = swig.renderFile('views/index.html', { html: html });
+//       res.status(200).send(page);
+//     } else {
+//       res.status(404).send('Page Not Found');
+//     }
+//   });
+// });
 
 // Initialize the server
 var server = require('http').createServer(app);
