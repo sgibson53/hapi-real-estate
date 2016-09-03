@@ -25350,7 +25350,7 @@
 
 	var _Home2 = _interopRequireDefault(_Home);
 
-	var _Construction = __webpack_require__(224);
+	var _Construction = __webpack_require__(225);
 
 	var _Construction2 = _interopRequireDefault(_Construction);
 
@@ -25431,6 +25431,12 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _reactRouter = __webpack_require__(158);
+
+	var _Nav = __webpack_require__(224);
+
+	var _Nav2 = _interopRequireDefault(_Nav);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -25449,12 +25455,38 @@
 	  }
 
 	  _createClass(Home, [{
+	    key: 'getSVG',
+	    value: function getSVG(useTag) {
+	      return _react2.default.createElement('svg', { dangerouslySetInnerHTML: { __html: useTag } });
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
+	      var self = this;
+
 	      return _react2.default.createElement(
 	        'div',
-	        null,
-	        'Hello, Hapi Real Estate! We are going to build you.., welcome, Sophie! I can reload automatically!!'
+	        { className: 'site-wrapper' },
+	        _react2.default.createElement(_Nav2.default, null),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'main-banner' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'main-logo' },
+	            self.getSVG('<use xlink:href="../assets/icons.svg#logo-1" />')
+	          ),
+	          _react2.default.createElement(
+	            'h1',
+	            { className: 'headline' },
+	            'The New Full Service at a Charming Flat Fee'
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'main-chat-button' },
+	            'Chat with Hapi'
+	          )
+	        )
 	      );
 	    }
 	  }]);
@@ -25466,6 +25498,76 @@
 
 /***/ },
 /* 224 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(158);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Nav = function (_React$Component) {
+	  _inherits(Nav, _React$Component);
+
+	  function Nav(props) {
+	    _classCallCheck(this, Nav);
+
+	    return _possibleConstructorReturn(this, (Nav.__proto__ || Object.getPrototypeOf(Nav)).call(this, props));
+	  }
+
+	  _createClass(Nav, [{
+	    key: 'render',
+	    value: function render() {
+
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'nav-wrapper' },
+	        _react2.default.createElement(
+	          'nav',
+	          { className: 'main-nav' },
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: '/' },
+	            'Buy'
+	          ),
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: '/' },
+	            'Sell'
+	          ),
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: '/' },
+	            'About'
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Nav;
+	}(_react2.default.Component);
+
+	exports.default = Nav;
+
+/***/ },
+/* 225 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";

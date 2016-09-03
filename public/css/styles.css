@@ -122,6 +122,9 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 * {
   box-sizing: border-box; }
 
+body {
+  font-family: "Droid Sans", sans-serif; }
+
 .construction-wrapper {
   position: absolute;
   top: 0;
@@ -133,3 +136,40 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
     color: white;
     text-align: center;
     margin: 100px auto auto auto; }
+
+.site-wrapper .nav-wrapper {
+  width: 100%;
+  background: green; }
+  .site-wrapper .nav-wrapper .main-nav {
+    position: absolute;
+    left: 30px;
+    top: 20px; }
+    .site-wrapper .nav-wrapper .main-nav a {
+      position: relative;
+      text-decoration: none;
+      color: #3954a5;
+      margin-right: 25px;
+      font-size: 1.2em; }
+      .site-wrapper .nav-wrapper .main-nav a:hover {
+        text-decoration: underline; }
+
+.site-wrapper .main-banner {
+  width: 100%; }
+  .site-wrapper .main-banner .main-logo {
+    text-align: center; }
+    .site-wrapper .main-banner .main-logo svg {
+      width: 165px;
+      margin: 50px auto 0 auto; }
+  .site-wrapper .main-banner .headline {
+    text-align: center;
+    width: 350px;
+    margin: 10px auto; }
+  .site-wrapper .main-banner .main-chat-button {
+    width: 150px;
+    height: 50px;
+    margin: 20px auto;
+    text-align: center;
+    line-height: 50px;
+    background: #7ed321;
+    border-radius: 5px;
+    color: white; }
