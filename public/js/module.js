@@ -25467,24 +25467,28 @@
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'site-wrapper' },
-	        _react2.default.createElement(_Nav2.default, null),
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'main-banner' },
+	          { className: 'home-background-1' },
+	          _react2.default.createElement(_Nav2.default, null),
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'main-logo' },
-	            self.getSVG('<use xlink:href="../assets/icons.svg#logo-1" />')
-	          ),
-	          _react2.default.createElement(
-	            'h1',
-	            { className: 'headline' },
-	            'The New Full Service at a Charming Flat Fee'
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'main-chat-button' },
-	            'Chat with Hapi'
+	            { className: 'main-banner' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'main-logo' },
+	              self.getSVG('<use xlink:href="../assets/icons.svg#logo-1" />')
+	            ),
+	            _react2.default.createElement(
+	              'h1',
+	              { className: 'headline' },
+	              'The New Full Service at a Charming Flat Fee'
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'main-chat-button' },
+	              'Chat with Hapi'
+	            )
 	          )
 	        )
 	      );

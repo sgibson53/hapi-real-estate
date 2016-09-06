@@ -17,13 +17,15 @@ export default class Home extends React.Component {
 
     return (
       <div className="site-wrapper">
-        <Nav />
-        <div className="main-banner">
-          <div className="main-logo">
-            {self.getSVG('<use xlink:href="../assets/icons.svg#logo-1" />')}
+        <div className="home-background-1">
+          <Nav />
+          <div className="main-banner">
+            <div className="main-logo">
+              {self.getSVG('<use xlink:href="../assets/icons.svg#logo-1" />')}
+            </div>
+            <h1 className="headline">The New Full Service at a Charming Flat Fee</h1>
+            <div className="main-chat-button">Chat with Hapi</div>
           </div>
-          <h1 className="headline">The New Full Service at a Charming Flat Fee</h1>
-          <div className="main-chat-button">Chat with Hapi</div>
         </div>
       </div>
     );

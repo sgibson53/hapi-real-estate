@@ -27,55 +27,73 @@ body {
 
 .site-wrapper {
 
-  .nav-wrapper {
+  .home-background-1 {
+    background: url('../assets/home-main-1.jpg') no-repeat center center;
+    background-size: cover;
     width: 100%;
-    background: green;
+    height: 800px;
 
-    .main-nav {
-      position: absolute;
-      left: 30px;
-      top: 20px;
-      a {
-        position: relative;
-        text-decoration: none;
-        color: $hapi-blue;
-        margin-right: 25px;
-        font-size: 1.2em;
+    .nav-wrapper {
+      width: 100%;
 
-        &:hover {
-          text-decoration: underline;
+      .main-nav {
+        position: absolute;
+        left: 50px;
+        top: 30px;
+
+        a {
+          position: relative;
+          text-decoration: none;
+          color: white;
+          margin-right: 55px;
+          font-size: 1.7em;
+          text-shadow: 2px 2px 5px black;
+
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
     }
-  }
 
-  .main-banner {
-    width: 100%;
+    .main-banner {
+      width: 100%;
 
-    .main-logo {
-      text-align: center;
+      .main-logo {
+        text-align: center;
 
-      svg {
-        width: 165px;
-        margin: 50px auto 0 auto;
+        svg {
+          width: 260px;
+          height: 250px;
+          margin: 80px auto 0 auto;
+        }
       }
-    }
 
-    .headline {
-      text-align: center;
-      width: 350px;
-      margin: 10px auto;
-    }
+      .headline {
+        text-align: center;
+        width: 600px;
+        margin: 10px auto;
+        text-shadow: 2px 2px 5px black;
+        font-size: 3.2em;
+        color: white;
+      }
 
-    .main-chat-button {
-      width: 150px;
-      height: 50px;
-      margin: 20px auto;
-      text-align: center;
-      line-height: 50px;
-      background: $hapi-green;
-      border-radius: 5px;
-      color: rgba(255,255,255,1);
+      .main-chat-button {
+        width: 150px;
+        height: 50px;
+        margin: 20px auto;
+        text-align: center;
+        line-height: 50px;
+        background: $hapi-green;
+        border-radius: 5px;
+        color: rgba(255,255,255,1);
+        cursor: pointer;
+        border: 2px solid rgba(0,0,0,0);
+
+        &:hover {
+          border: 2px solid $hapi-blue;
+        }
+      }
     }
   }
 }
