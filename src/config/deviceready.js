@@ -10,7 +10,6 @@ if (local) {
 
 function ready() {
   FastClick.attach(document.body);
-  svgeezy.init(false, 'png');
 }
 
 function localReady() {
