@@ -1,4 +1,7 @@
 @import 'variables';
+@import 'jquery-ui.structure.min.scss';
+@import 'jquery-ui.theme.min.scss';
+
 
 /* CSS Normalize */
 article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */
@@ -54,6 +57,35 @@ body {
           }
         }
       }
+
+      .social-icons-backdrop {
+        position: absolute;
+        top: 0;
+        right: 120px;
+        width: 235px;
+        height: 80px;
+
+        svg {
+          position: relative;
+          top: 10px;
+          width: 40px;
+          height: 40px;
+          margin-left: 15px;
+          z-index: 1;
+          transition: all .1s ease-in-out;
+
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+
+        img {
+          position: absolute;
+          width: 235px;
+          top: 0;
+          left: 0;
+        }
+      }
     }
 
     .main-banner {
@@ -89,10 +121,85 @@ body {
         color: rgba(255,255,255,1);
         cursor: pointer;
         border: 2px solid rgba(0,0,0,0);
+        transition: all .5s;
 
         &:hover {
-          border: 2px solid $hapi-blue;
+          transform: rotateY(360deg);
         }
+      }
+    }
+  }
+
+  .price-slider-wrapper {
+    h3 {
+      padding: 20px 0 0 0;
+      max-width: 80%;
+      margin: auto;
+      font-size: 2em;
+    }
+    h4 {
+      padding: 0;
+      margin: auto;
+      max-width: 80%;
+      text-align: center;
+      height: 10px;
+      font-size: 1.2em;
+    }
+    .slider {
+      position: relative;
+      top: 0;
+      max-width: 80%;
+      margin: 30pt auto 15pt auto;
+      .ui-slider-handle:focus {
+        outline: none;
+      }
+      .ui-slider-handle:active {
+        background-color: $hapi-blue;
+      }
+      #slider-label {
+        position: relative;
+        top: 16pt;
+        left: -30pt;
+        color: black;
+      }
+    }
+    .cost-table {
+      position: relative;
+      top: -50pt;
+      width: 80%;
+      margin: auto;
+      tr {
+        text-align: left;
+        line-height: 25pt;
+        vertical-align: middle;
+        border-bottom: 1px solid black;
+      }
+      th {
+        font-size: 1.2em;
+        line-height: 30pt;
+      }
+      tr:first-child {
+        height: 55pt;
+        vertical-align: top;
+        border: none;
+        td:first-child {
+          text-align: left;
+        }
+        td:last-child {
+          text-align: right;
+        }
+       }
+       tr:last-child {
+         line-height: 60pt;
+         font-size: 1.5em;
+         border: none;
+       }
+      .hapi-fee {
+        color: $hapi-blue;
+      }
+      .you-save {
+        color: $hapi-green;
+        font-weight: bold;
       }
     }
   }

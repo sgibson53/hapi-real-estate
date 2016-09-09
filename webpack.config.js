@@ -28,7 +28,10 @@ module.exports = {
           root: [
               __dirname+'/node_modules'
           ],
-          extensions: ['', '.js', '.json', '.jsx']
+          extensions: ['', '.js', '.json', '.jsx'],
+          alias: {
+            "jquery-ui": "jquery-ui/jquery-ui.js"
+          }
       },
 
   	plugins: [
