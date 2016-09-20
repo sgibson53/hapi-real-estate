@@ -1,6 +1,5 @@
 @import 'variables';
-@import 'jquery-ui.structure.min.scss';
-@import 'jquery-ui.theme.min.scss';
+@import 'nouislider.min.scss';
 
 
 /* CSS Normalize */
@@ -145,27 +144,21 @@ body {
       height: 10px;
       font-size: 1.2em;
     }
-    .slider {
-      position: relative;
-      top: 0;
-      max-width: 80%;
-      margin: 30pt auto 15pt auto;
-      .ui-slider-handle:focus {
-        outline: none;
-      }
-      .ui-slider-handle:active {
-        background-color: $hapi-blue;
-      }
-      #slider-label {
-        position: relative;
-        top: 16pt;
-        left: -30pt;
-        color: black;
+
+    #home-price-slider {
+      margin: auto;
+      margin-top: 20pt;
+      display: block;
+      width: 80%;
+      background: $hapi-green;
+
+      .noUi-origin, .noUi-stacking {
+        background: rgba(245, 245, 245, 1);
       }
     }
     .cost-table {
       position: relative;
-      top: -50pt;
+      top: -40pt;
       width: 80%;
       margin: auto;
       tr {

@@ -1,14 +1,30 @@
 var webpack = require("webpack");
 var path = require('path');
 
+var lib_dir = __dirname + '/public/libs',
+    node_dir = __dirname + '/node_modules';
+
 
 module.exports = {
-    entry: "./src/main.js",
+    resolve: {
+      alias: {
+        react: node_dir + '/react',
+        reactDom: node_dir + '/react-dom',
+        // jqueryUI: lib_dir + '/jquery-ui.min.js'
+      }
+    },
+    entry: {
+      app: ["./src/main.js"],
+      // vendors: ['react', 'reactDom', 'jqueryUI']
+    },
     output: {
         path: __dirname,
         filename: "./module.js"
     },
   	module: {
+      noParse: [
+        // new RegExp(lib_dir + '/jquery-ui.min.js')
+      ],
   	  loaders: [
     		{
     		  test: /\.jsx|\.js?$/,
@@ -24,22 +40,12 @@ module.exports = {
   	  ]
   	},
 
-    resolve: {
-          root: [
-              __dirname+'/node_modules'
-          ],
-          extensions: ['', '.js', '.json', '.jsx'],
-          alias: {
-            "jquery-ui": "jquery-ui/jquery-ui.js"
-          }
-      },
-
   	plugins: [
         //new webpack.optimize.UglifyJsPlugin({minimize: true}),
         new webpack.ProvidePlugin({
             $: "jquery",
             jQuery: "jquery",
-            "window.jQuery": "jquery"
+            'window.jQuery': "jquery"
         }),
 
         new webpack.ProvidePlugin({

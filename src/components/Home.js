@@ -12,7 +12,6 @@ export default class Home extends React.Component {
   }
 
   componentDidMount() {
-    $('.slider').slider();
   }
 
   render() {
@@ -37,8 +36,8 @@ export default class Home extends React.Component {
 
         <div className="price-slider-wrapper">
           <h3>How much will your savings be?</h3>
-          <h4>Home Price</h4>
-          <div className="slider">
+          <h4>Home Price: <span id="slider-value-display"></span></h4>
+          <div id="home-price-slider">
           </div>
           <table className="cost-table">
             <tr>
