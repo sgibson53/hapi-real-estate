@@ -25608,7 +25608,7 @@
 	              _react2.default.createElement(
 	                'th',
 	                null,
-	                'TRADITIONAL COMISSION'
+	                'TRADITIONAL Commission'
 	              ),
 	              _react2.default.createElement(
 	                'th',
@@ -25634,7 +25634,7 @@
 	                null,
 	                _react2.default.createElement(
 	                  'span',
-	                  { className: 'comission' },
+	                  { className: 'commission' },
 	                  '$3,000'
 	                )
 	              ),
@@ -25666,7 +25666,7 @@
 	                null,
 	                _react2.default.createElement(
 	                  'span',
-	                  { className: 'comission' },
+	                  { className: 'commission' },
 	                  '$3,000'
 	                )
 	              ),
@@ -25691,7 +25691,7 @@
 	              _react2.default.createElement(
 	                'td',
 	                null,
-	                'Total Comission on ',
+	                'Total Commission on ',
 	                _react2.default.createElement(
 	                  'span',
 	                  { id: 'total-com-cost' },
@@ -25704,7 +25704,7 @@
 	                null,
 	                _react2.default.createElement(
 	                  'span',
-	                  { id: 'totalComission' },
+	                  { id: 'totalCommission' },
 	                  '$6,000'
 	                )
 	              ),
@@ -25960,8 +25960,8 @@
 	    });
 
 	    var slideValue = 100000,
-	        comissionValue = 3000,
-	        totalComission = 6000,
+	        commissionValue = 3000,
+	        totalCommission = 6000,
 	        saveValue = 500,
 	        totalSave = 1000;
 
@@ -25983,8 +25983,8 @@
 	      }
 	      console.log(slideValue);
 
-	      comissionValue = formattedArr[1];
-	      totalComission = formattedArr[2];
+	      commissionValue = formattedArr[1];
+	      totalCommission = formattedArr[2];
 	      saveValue = formattedArr[3];
 	      totalSave = formattedArr[4];
 
@@ -25992,8 +25992,8 @@
 	      $('#slider-value-display').replaceWith('<span id="slider-value-display">' + slideValue + '</span>');
 	      $('#slider-label').replaceWith('<span id="slider-label">' + slideValue + '</span>');
 	      $('#total-com-cost').replaceWith('<span id="total-com-cost">' + slideValue + '</span>');
-	      $('.comission').replaceWith('<span class="comission">' + comissionValue + '</span>');
-	      $('#totalComission').replaceWith('<span id="totalComission">' + totalComission + '</span>');
+	      $('.commission').replaceWith('<span class="commission">' + commissionValue + '</span>');
+	      $('#totalCommission').replaceWith('<span id="totalCommission">' + totalCommission + '</span>');
 	      $('.saveValue').replaceWith('<span class="saveValue">' + saveValue + '</span>');
 	      $('#totalSavings').replaceWith('<span id="totalSavings">' + totalSave + '</span>');
 	    });

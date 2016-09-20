@@ -46,25 +46,25 @@ export default class Home extends React.Component {
             </tr>
             <tr>
               <th></th>
-              <th>TRADITIONAL COMISSION</th>
+              <th>TRADITIONAL Commission</th>
               <th className="hapi-fee">HAPI FEE</th>
               <th className="you-save">YOU SAVE</th>
             </tr>
             <tr>
               <td>Seller's Agent</td>
-              <td><span className="comission">$3,000</span></td>
+              <td><span className="commission">$3,000</span></td>
               <td className="hapi-fee">$2,500</td>
               <td className="you-save"><span className="saveValue">$500</span></td>
             </tr>
             <tr>
               <td>Buyer's Agent</td>
-              <td><span className="comission">$3,000</span></td>
+              <td><span className="commission">$3,000</span></td>
               <td className="hapi-fee">$2,500</td>
               <td className="you-save"><span className="saveValue">$500</span></td>
             </tr>
             <tr>
-              <td>Total Comission on <span id='total-com-cost'>$100,000</span> home</td>
-              <td><span id="totalComission">$6,000</span></td>
+              <td>Total Commission on <span id='total-com-cost'>$100,000</span> home</td>
+              <td><span id="totalCommission">$6,000</span></td>
               <td className="hapi-fee">$5,000</td>
               <td className="you-save"><span id="totalSavings">$1,000</span></td>
             </tr>
