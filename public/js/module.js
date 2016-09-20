@@ -25598,7 +25598,7 @@
 	              _react2.default.createElement(
 	                'td',
 	                { colSpan: '2' },
-	                '$3,000,000'
+	                '$3,500,000'
 	              )
 	            ),
 	            _react2.default.createElement(
@@ -25722,6 +25722,61 @@
 	                  '$1,000'
 	                )
 	              )
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'kitchen-bg-wrapper' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'home-elevator-banner' },
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              'Hapi Real Estate Services is the ',
+	              _react2.default.createElement(
+	                'span',
+	                { className: 'highlight' },
+	                'new full service, flat fee'
+	              ),
+	              ' real estate company. For ',
+	              _react2.default.createElement(
+	                'span',
+	                { className: 'highlight' },
+	                '$3,500'
+	              ),
+	              ', we represent buyers and sellers in residential real estate transactions with the new full service that ',
+	              _react2.default.createElement(
+	                'span',
+	                { className: 'highlight' },
+	                'includes professional cleaning'
+	              ),
+	              ' and ',
+	              _react2.default.createElement(
+	                'span',
+	                { className: 'highlight' },
+	                'photography'
+	              ),
+	              '. Hapi agents are salaried, full time real estate professionals whose compensations are not aligned with the value of your home. We believe in being ',
+	              _react2.default.createElement(
+	                'span',
+	                { className: 'highlight' },
+	                'committed, transparent, and honest'
+	              ),
+	              ' throughout the buying and selling processes. Hapi leverages technology, networking, and experience to find or sell your home ',
+	              _react2.default.createElement(
+	                'span',
+	                { className: 'highlight' },
+	                'quickly'
+	              ),
+	              ' and ',
+	              _react2.default.createElement(
+	                'span',
+	                { className: 'highlight' },
+	                'conveniently'
+	              ),
+	              '.'
 	            )
 	          )
 	        )
@@ -25880,6 +25935,12 @@
 	// import FastClick from 'fastclick';
 	var local = false;
 
+	// while (typeof document == 'undefined') {
+	//   setTimeout(function() {
+	//     console.log("waiting for client side..");
+	//   }, 200);
+	// }
+
 	if (typeof document != 'undefined') {
 	  // document.addEventListener('deviceready', function() {
 	  $(function () {
@@ -25937,29 +25998,6 @@
 	      $('#totalSavings').replaceWith('<span id="totalSavings">' + totalSave + '</span>');
 	    });
 	    // FastClick.attach(document.body);
-
-	    //
-
-	    // $('.ui-slider-handle').append('<span id="slider-label">100,000</span>');
-	    //
-	    // $('.slider').on("slide", function(event, ui) {
-	    //   var formattedArr = [ui.value, ui.value*0.03, ui.value*0.03*2, ui.value*0.03-2500, ui.value*0.03*2-5000, ];
-	    //   formatCashAmt(formattedArr);
-	    //
-	    //   slideValue = formattedArr[0];
-	    //   comissionValue = formattedArr[1];
-	    //   totalComission = formattedArr[2];
-	    //   saveValue = formattedArr[3];
-	    //   totalSave = formattedArr[4],
-	    //
-	    //   console.log(formattedArr);
-	    //   $('#slider-label').replaceWith('<span id="slider-label">'+slideValue+'</span>');
-	    //   $('#total-com-cost').replaceWith('<span id="total-com-cost">'+slideValue+'</span>');
-	    //   $('.comission').replaceWith('<span class="comission">'+comissionValue+'</span>');
-	    //   $('#totalComission').replaceWith('<span id="totalComission">'+totalComission+'</span>');
-	    //   $('.saveValue').replaceWith('<span class="saveValue">'+saveValue+'</span>');
-	    //   $('#totalSavings').replaceWith('<span id="totalSavings">'+totalSave+'</span>');
-	    // });
 	  });
 	} else {
 	  console.log("deviceready not executed, on the server");

@@ -42,7 +42,7 @@ export default class Home extends React.Component {
           <table className="cost-table">
             <tr>
               <td colSpan="2">$100,000</td>
-              <td colSpan="2">$3,000,000</td>
+              <td colSpan="2">$3,500,000</td>
             </tr>
             <tr>
               <th></th>
@@ -70,6 +70,13 @@ export default class Home extends React.Component {
             </tr>
           </table>
         </div>
+
+        <div className="kitchen-bg-wrapper">
+          <div className="home-elevator-banner">
+            <p>Hapi Real Estate Services is the <span className="highlight">new full service, flat fee</span> real estate company. For <span className="highlight">$3,500</span>, we represent buyers and sellers in residential real estate transactions with the new full service that <span className="highlight">includes professional cleaning</span> and <span className="highlight">photography</span>. Hapi agents are salaried, full time real estate professionals whose compensations are not aligned with the value of your home. We believe in being <span className="highlight">committed, transparent, and honest</span> throughout the buying and selling processes. Hapi leverages technology, networking, and experience to find or sell your home <span className="highlight">quickly</span> and <span className="highlight">conveniently</span>.</p>
+          </div>
+        </div>
+
       </div>
     );
   }

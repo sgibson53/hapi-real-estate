@@ -131,7 +131,7 @@ body {
 
   .price-slider-wrapper {
     h3 {
-      padding: 20px 0 0 0;
+      padding: 20pt 0 20pt 0;
       max-width: 80%;
       margin: auto;
       font-size: 2em;
@@ -196,4 +196,27 @@ body {
       }
     }
   }
+
+  .kitchen-bg-wrapper {
+    height: 800pt;
+    // background: url('../assets/kitchen-1.jpg') no-repeat center center;
+    .home-elevator-banner {
+      width: 100%;
+      background: url('../assets/home-elevator-banner@2x.png') no-repeat center center;
+      border-top: 2px solid $hapi-blue;
+      border-bottom: 2px solid $hapi-blue;
+
+      p {
+        padding: 15pt 10%;
+        font-size: 1.5em;
+        line-height: 25pt;
+
+        .highlight {
+          color: $hapi-blue;
+        }
+      }
+    }
+  }
+
+
 }

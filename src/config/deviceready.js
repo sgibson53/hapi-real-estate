@@ -5,6 +5,12 @@ import noUiSlider from './nouislider.min.js';
 
 var local = false;
 
+// while (typeof document == 'undefined') {
+//   setTimeout(function() {
+//     console.log("waiting for client side..");
+//   }, 200);
+// }
+
 if (typeof document != 'undefined') {
 // document.addEventListener('deviceready', function() {
     $(function() {
@@ -64,28 +70,6 @@ if (typeof document != 'undefined') {
   });
     // FastClick.attach(document.body);
 
-    //
-
-    // $('.ui-slider-handle').append('<span id="slider-label">100,000</span>');
-    //
-    // $('.slider').on("slide", function(event, ui) {
-    //   var formattedArr = [ui.value, ui.value*0.03, ui.value*0.03*2, ui.value*0.03-2500, ui.value*0.03*2-5000, ];
-    //   formatCashAmt(formattedArr);
-    //
-    //   slideValue = formattedArr[0];
-    //   comissionValue = formattedArr[1];
-    //   totalComission = formattedArr[2];
-    //   saveValue = formattedArr[3];
-    //   totalSave = formattedArr[4],
-    //
-    //   console.log(formattedArr);
-    //   $('#slider-label').replaceWith('<span id="slider-label">'+slideValue+'</span>');
-    //   $('#total-com-cost').replaceWith('<span id="total-com-cost">'+slideValue+'</span>');
-    //   $('.comission').replaceWith('<span class="comission">'+comissionValue+'</span>');
-    //   $('#totalComission').replaceWith('<span id="totalComission">'+totalComission+'</span>');
-    //   $('.saveValue').replaceWith('<span class="saveValue">'+saveValue+'</span>');
-    //   $('#totalSavings').replaceWith('<span id="totalSavings">'+totalSave+'</span>');
-    // });
 });
 } else {
   console.log("deviceready not executed, on the server");

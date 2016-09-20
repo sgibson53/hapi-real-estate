@@ -417,7 +417,7 @@ body {
         transform: rotateY(360deg); }
 
 .site-wrapper .price-slider-wrapper h3 {
-  padding: 20px 0 0 0;
+  padding: 20pt 0 20pt 0;
   max-width: 80%;
   margin: auto;
   font-size: 2em; }
@@ -469,3 +469,17 @@ body {
   .site-wrapper .price-slider-wrapper .cost-table .you-save {
     color: #7ed321;
     font-weight: bold; }
+
+.site-wrapper .kitchen-bg-wrapper {
+  height: 800pt; }
+  .site-wrapper .kitchen-bg-wrapper .home-elevator-banner {
+    width: 100%;
+    background: url("../assets/home-elevator-banner@2x.png") no-repeat center center;
+    border-top: 2px solid #3954a5;
+    border-bottom: 2px solid #3954a5; }
+    .site-wrapper .kitchen-bg-wrapper .home-elevator-banner p {
+      padding: 15pt 10%;
+      font-size: 1.5em;
+      line-height: 25pt; }
+      .site-wrapper .kitchen-bg-wrapper .home-elevator-banner p .highlight {
+        color: #3954a5; }
