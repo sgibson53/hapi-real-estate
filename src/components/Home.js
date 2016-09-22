@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router';
 import Nav from './Nav';
+import ContactForm from './ContactForm';
 
 import {getSVG} from '../config/utilities';
 import deviceready from '../config/deviceready';
@@ -12,6 +13,12 @@ export default class Home extends React.Component {
   }
 
   componentDidMount() {
+  }
+
+  contactUsHandler(e) {
+    $('#home-contact-us').slideUp(400, function() {
+      $('.contact-form-wrapper').slideDown(600);
+    });
   }
 
   render() {
@@ -74,6 +81,10 @@ export default class Home extends React.Component {
         <div className="kitchen-bg-wrapper">
           <div className="home-elevator-banner">
             <p>Hapi Real Estate Services is the <span className="highlight">new full service, flat fee</span> real estate company. For <span className="highlight">$3,500</span>, we represent buyers and sellers in residential real estate transactions with the new full service that <span className="highlight">includes professional cleaning</span> and <span className="highlight">photography</span>. Hapi agents are salaried, full time real estate professionals whose compensations are not aligned with the value of your home. We believe in being <span className="highlight">committed, transparent, and honest</span> throughout the buying and selling processes. Hapi leverages technology, networking, and experience to find or sell your home <span className="highlight">quickly</span> and <span className="highlight">conveniently</span>.</p>
+          </div>
+          <div className="contact-us-wrapper">
+            <button id="home-contact-us" onClick={self.contactUsHandler.bind(self)}>Contact Us</button>
+            <ContactForm />
           </div>
         </div>
 

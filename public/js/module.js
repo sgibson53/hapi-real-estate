@@ -25424,7 +25424,7 @@
 
 	var _Home2 = _interopRequireDefault(_Home);
 
-	var _Construction = __webpack_require__(231);
+	var _Construction = __webpack_require__(232);
 
 	var _Construction2 = _interopRequireDefault(_Construction);
 
@@ -25493,7 +25493,7 @@
 /* 225 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	/* WEBPACK VAR INJECTION */(function($) {'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -25507,13 +25507,17 @@
 
 	var _reactRouter = __webpack_require__(159);
 
-	var _Nav = __webpack_require__(226);
+	var _Nav = __webpack_require__(227);
 
 	var _Nav2 = _interopRequireDefault(_Nav);
 
-	var _utilities = __webpack_require__(227);
+	var _ContactForm = __webpack_require__(229);
 
-	var _deviceready = __webpack_require__(228);
+	var _ContactForm2 = _interopRequireDefault(_ContactForm);
+
+	var _utilities = __webpack_require__(228);
+
+	var _deviceready = __webpack_require__(230);
 
 	var _deviceready2 = _interopRequireDefault(_deviceready);
 
@@ -25537,6 +25541,13 @@
 	  _createClass(Home, [{
 	    key: 'componentDidMount',
 	    value: function componentDidMount() {}
+	  }, {
+	    key: 'contactUsHandler',
+	    value: function contactUsHandler(e) {
+	      $('#home-contact-us').slideUp(400, function () {
+	        $('.contact-form-wrapper').slideDown(600);
+	      });
+	    }
 	  }, {
 	    key: 'render',
 	    value: function render() {
@@ -25778,6 +25789,16 @@
 	              ),
 	              '.'
 	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'contact-us-wrapper' },
+	            _react2.default.createElement(
+	              'button',
+	              { id: 'home-contact-us', onClick: self.contactUsHandler.bind(self) },
+	              'Contact Us'
+	            ),
+	            _react2.default.createElement(_ContactForm2.default, null)
 	          )
 	        )
 	      );
@@ -25788,224 +25809,10 @@
 	}(_react2.default.Component);
 
 	exports.default = Home;
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(226)))
 
 /***/ },
 /* 226 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(159);
-
-	var _utilities = __webpack_require__(227);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Nav = function (_React$Component) {
-	  _inherits(Nav, _React$Component);
-
-	  function Nav(props) {
-	    _classCallCheck(this, Nav);
-
-	    return _possibleConstructorReturn(this, (Nav.__proto__ || Object.getPrototypeOf(Nav)).call(this, props));
-	  }
-
-	  _createClass(Nav, [{
-	    key: 'render',
-	    value: function render() {
-
-	      return _react2.default.createElement(
-	        'div',
-	        { className: 'nav-wrapper' },
-	        _react2.default.createElement(
-	          'nav',
-	          { className: 'main-nav' },
-	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { to: '/' },
-	            'Buy'
-	          ),
-	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { to: '/' },
-	            'Sell'
-	          ),
-	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { to: '/' },
-	            'About'
-	          )
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'social-icons-backdrop' },
-	          _react2.default.createElement('img', { src: '../assets/Rectangle13.svg' }),
-	          (0, _utilities.getSVG)('../assets/icons.svg#twitter'),
-	          (0, _utilities.getSVG)('../assets/icons.svg#facebook'),
-	          (0, _utilities.getSVG)('../assets/icons.svg#linkedin'),
-	          (0, _utilities.getSVG)('../assets/icons.svg#instagram')
-	        )
-	      );
-	    }
-	  }]);
-
-	  return Nav;
-	}(_react2.default.Component);
-
-	exports.default = Nav;
-
-/***/ },
-/* 227 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(React) {'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	console.log("utilities.js");
-
-	var getSVG = function getSVG(path) {
-	  return React.createElement('svg', { dangerouslySetInnerHTML: { __html: '<use xlink:href=' + path + ' />' } });
-	};
-
-	var formatCashAmt = function formatCashAmt(arr) {
-	  for (var amt in arr) {
-	    arr[amt] = String(arr[amt]);
-	    var mod = Math.ceil(arr[amt].length / 3);
-	    switch (mod) {
-	      case 2:
-	        var lastThree = arr[amt].substring(arr[amt].length - 3, arr[amt].length);
-	        lastThree = ',' + lastThree;
-	        var formatted = arr[amt].substring(0, arr[amt].length - 3);
-	        formatted = formatted + lastThree;
-	        arr[amt] = formatted;
-	        break;
-	      case 3:
-	        var lastThree = arr[amt].substring(arr[amt].length - 3, arr[amt].length);
-	        lastThree = ',' + lastThree;
-	        var formatted = arr[amt].substring(0, arr[amt].length - 3);
-	        formatted = formatted + lastThree;
-	        arr[amt] = formatted;
-	        var middleThree = arr[amt].substring(arr[amt].length - 7, arr[amt].length);
-	        middleThree = ',' + middleThree;
-	        formatted = arr[amt].substring(0, arr[amt].length - 7);
-	        formatted = formatted + middleThree;
-	        arr[amt] = formatted;
-	        break;
-	    }
-	    arr[amt] = '$' + arr[amt];
-	  }
-	};
-
-	exports.getSVG = getSVG;
-	exports.formatCashAmt = formatCashAmt;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
-
-/***/ },
-/* 228 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function($) {'use strict';
-
-	var _utilities = __webpack_require__(227);
-
-	var _nouisliderMin = __webpack_require__(230);
-
-	var _nouisliderMin2 = _interopRequireDefault(_nouisliderMin);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	// import FastClick from 'fastclick';
-	var local = false;
-
-	// while (typeof document == 'undefined') {
-	//   setTimeout(function() {
-	//     console.log("waiting for client side..");
-	//   }, 200);
-	// }
-
-	if (typeof document != 'undefined') {
-	  // document.addEventListener('deviceready', function() {
-	  $(function () {
-
-	    console.log("document ready");
-	    var slider = document.getElementById('home-price-slider');
-	    console.log(slider);
-
-	    _nouisliderMin2.default.create(slider, {
-	      start: [50000],
-	      range: {
-	        'min': [100000, 1000],
-	        '50%': [200000, 10000],
-	        '60%': [500000, 50000],
-	        'max': [3500000]
-	      }
-	    });
-
-	    var slideValue = 100000,
-	        commissionValue = 3000,
-	        totalCommission = 6000,
-	        saveValue = 500,
-	        totalSave = 1000;
-
-	    slider.noUiSlider.on('update', function () {
-	      var ui = slider.noUiSlider.get();
-	      var formattedArr = [ui, ui * 0.03, ui * 0.03 * 2, ui * 0.03 - 2500, ui * 0.03 * 2 - 5000];
-	      (0, _utilities.formatCashAmt)(formattedArr);
-
-	      slideValue = formattedArr[0];
-
-	      // remove trailing ',.00'
-	      console.log(slideValue);
-	      slideValue = slideValue.toString();
-	      console.log(slideValue);
-	      slideValue = slideValue.substring(0, slideValue.length - 3);
-	      console.log(slideValue);
-	      if (slideValue.charAt(slideValue.length - 1) == ',') {
-	        slideValue = slideValue.substring(0, slideValue.length - 1);
-	      }
-	      console.log(slideValue);
-
-	      commissionValue = formattedArr[1];
-	      totalCommission = formattedArr[2];
-	      saveValue = formattedArr[3];
-	      totalSave = formattedArr[4];
-
-	      console.log(formattedArr);
-	      $('#slider-value-display').replaceWith('<span id="slider-value-display">' + slideValue + '</span>');
-	      $('#slider-label').replaceWith('<span id="slider-label">' + slideValue + '</span>');
-	      $('#total-com-cost').replaceWith('<span id="total-com-cost">' + slideValue + '</span>');
-	      $('.commission').replaceWith('<span class="commission">' + commissionValue + '</span>');
-	      $('#totalCommission').replaceWith('<span id="totalCommission">' + totalCommission + '</span>');
-	      $('.saveValue').replaceWith('<span class="saveValue">' + saveValue + '</span>');
-	      $('#totalSavings').replaceWith('<span id="totalSavings">' + totalSave + '</span>');
-	    });
-	    // FastClick.attach(document.body);
-	  });
-	} else {
-	  console.log("deviceready not executed, on the server");
-	}
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(229)))
-
-/***/ },
-/* 229 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -35825,7 +35632,360 @@
 
 
 /***/ },
+/* 227 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(159);
+
+	var _utilities = __webpack_require__(228);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Nav = function (_React$Component) {
+	  _inherits(Nav, _React$Component);
+
+	  function Nav(props) {
+	    _classCallCheck(this, Nav);
+
+	    return _possibleConstructorReturn(this, (Nav.__proto__ || Object.getPrototypeOf(Nav)).call(this, props));
+	  }
+
+	  _createClass(Nav, [{
+	    key: 'render',
+	    value: function render() {
+
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'nav-wrapper' },
+	        _react2.default.createElement(
+	          'nav',
+	          { className: 'main-nav' },
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: '/' },
+	            'Buy'
+	          ),
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: '/' },
+	            'Sell'
+	          ),
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: '/' },
+	            'About'
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'social-icons-backdrop' },
+	          _react2.default.createElement('img', { src: '../assets/Rectangle13.svg' }),
+	          (0, _utilities.getSVG)('../assets/icons.svg#twitter'),
+	          (0, _utilities.getSVG)('../assets/icons.svg#facebook'),
+	          (0, _utilities.getSVG)('../assets/icons.svg#linkedin'),
+	          (0, _utilities.getSVG)('../assets/icons.svg#instagram')
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Nav;
+	}(_react2.default.Component);
+
+	exports.default = Nav;
+
+/***/ },
+/* 228 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(React) {'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	console.log("utilities.js");
+
+	var getSVG = function getSVG(path) {
+	  return React.createElement('svg', { dangerouslySetInnerHTML: { __html: '<use xlink:href=' + path + ' />' } });
+	};
+
+	var formatCashAmt = function formatCashAmt(arr) {
+	  for (var amt in arr) {
+	    arr[amt] = String(arr[amt]);
+	    var mod = Math.ceil(arr[amt].length / 3);
+	    switch (mod) {
+	      case 2:
+	        var lastThree = arr[amt].substring(arr[amt].length - 3, arr[amt].length);
+	        lastThree = ',' + lastThree;
+	        var formatted = arr[amt].substring(0, arr[amt].length - 3);
+	        formatted = formatted + lastThree;
+	        arr[amt] = formatted;
+	        break;
+	      case 3:
+	        var lastThree = arr[amt].substring(arr[amt].length - 3, arr[amt].length);
+	        lastThree = ',' + lastThree;
+	        var formatted = arr[amt].substring(0, arr[amt].length - 3);
+	        formatted = formatted + lastThree;
+	        arr[amt] = formatted;
+	        var middleThree = arr[amt].substring(arr[amt].length - 7, arr[amt].length);
+	        middleThree = ',' + middleThree;
+	        formatted = arr[amt].substring(0, arr[amt].length - 7);
+	        formatted = formatted + middleThree;
+	        arr[amt] = formatted;
+	        break;
+	    }
+	    arr[amt] = '$' + arr[amt];
+	  }
+	};
+
+	exports.getSVG = getSVG;
+	exports.formatCashAmt = formatCashAmt;
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+
+/***/ },
+/* 229 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function($) {'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(159);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var ContactForm = function (_React$Component) {
+	  _inherits(ContactForm, _React$Component);
+
+	  function ContactForm(props) {
+	    _classCallCheck(this, ContactForm);
+
+	    return _possibleConstructorReturn(this, (ContactForm.__proto__ || Object.getPrototypeOf(ContactForm)).call(this, props));
+	  }
+
+	  _createClass(ContactForm, [{
+	    key: 'handleFormCancel',
+	    value: function handleFormCancel(e) {
+	      $('.contact-form-wrapper').slideUp(600, function () {
+	        $('#home-contact-us').slideDown(400);
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var self = this;
+
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'contact-form-wrapper' },
+	        _react2.default.createElement(
+	          'h3',
+	          null,
+	          'CONTACT'
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'cf-content' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'col-1' },
+	            _react2.default.createElement(
+	              'form',
+	              { className: 'cf-form' },
+	              _react2.default.createElement('input', { className: 'cf-text-input', type: 'text', placeholder: 'First Name' }),
+	              _react2.default.createElement('input', { className: 'cf-text-input', type: 'text', placeholder: 'Last Name' }),
+	              _react2.default.createElement('input', { className: 'cf-text-input', type: 'text', placeholder: 'Email' }),
+	              _react2.default.createElement('input', { className: 'cf-text-input', type: 'text', placeholder: 'Telephone' }),
+	              _react2.default.createElement('textarea', { className: 'cf-textarea-input', rows: '10', cols: '100', placeholder: 'Questions?' })
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'col-2' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'info-1' },
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                '1.800.777.7777'
+	              ),
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                'info@hapirealestate.com'
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'info-2' },
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                'Hapi Real Estate, Inc.'
+	              ),
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                '123 Hapi St.'
+	              ),
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                'Suite 1000'
+	              ),
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                'Cleveland, OH 88888'
+	              )
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'cf-footer' },
+	          _react2.default.createElement(
+	            'button',
+	            { id: 'cf-submit' },
+	            'Submit'
+	          ),
+	          _react2.default.createElement(
+	            'button',
+	            { onClick: self.handleFormCancel.bind(self), id: 'cf-cancel' },
+	            'Cancel'
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return ContactForm;
+	}(_react2.default.Component);
+
+	exports.default = ContactForm;
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(226)))
+
+/***/ },
 /* 230 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function($) {'use strict';
+
+	var _utilities = __webpack_require__(228);
+
+	var _nouisliderMin = __webpack_require__(231);
+
+	var _nouisliderMin2 = _interopRequireDefault(_nouisliderMin);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	// import FastClick from 'fastclick';
+	var local = false;
+
+	// while (typeof document == 'undefined') {
+	//   setTimeout(function() {
+	//     console.log("waiting for client side..");
+	//   }, 200);
+	// }
+
+	if (typeof document != 'undefined') {
+	  // document.addEventListener('deviceready', function() {
+	  $(function () {
+
+	    console.log("document ready");
+	    var slider = document.getElementById('home-price-slider');
+	    console.log(slider);
+
+	    _nouisliderMin2.default.create(slider, {
+	      start: [50000],
+	      range: {
+	        'min': [100000, 1000],
+	        '50%': [200000, 10000],
+	        '60%': [500000, 50000],
+	        'max': [3500000]
+	      }
+	    });
+
+	    var slideValue = 100000,
+	        commissionValue = 3000,
+	        totalCommission = 6000,
+	        saveValue = 500,
+	        totalSave = 1000;
+
+	    slider.noUiSlider.on('update', function () {
+	      var ui = slider.noUiSlider.get();
+	      var formattedArr = [ui, ui * 0.03, ui * 0.03 * 2, ui * 0.03 - 2500, ui * 0.03 * 2 - 5000];
+	      (0, _utilities.formatCashAmt)(formattedArr);
+
+	      slideValue = formattedArr[0];
+
+	      // remove trailing ',.00'
+	      console.log(slideValue);
+	      slideValue = slideValue.toString();
+	      console.log(slideValue);
+	      slideValue = slideValue.substring(0, slideValue.length - 3);
+	      console.log(slideValue);
+	      if (slideValue.charAt(slideValue.length - 1) == ',') {
+	        slideValue = slideValue.substring(0, slideValue.length - 1);
+	      }
+	      console.log(slideValue);
+
+	      commissionValue = formattedArr[1];
+	      totalCommission = formattedArr[2];
+	      saveValue = formattedArr[3];
+	      totalSave = formattedArr[4];
+
+	      console.log(formattedArr);
+	      $('#slider-value-display').replaceWith('<span id="slider-value-display">' + slideValue + '</span>');
+	      $('#slider-label').replaceWith('<span id="slider-label">' + slideValue + '</span>');
+	      $('#total-com-cost').replaceWith('<span id="total-com-cost">' + slideValue + '</span>');
+	      $('.commission').replaceWith('<span class="commission">' + commissionValue + '</span>');
+	      $('#totalCommission').replaceWith('<span id="totalCommission">' + totalCommission + '</span>');
+	      $('.saveValue').replaceWith('<span class="saveValue">' + saveValue + '</span>');
+	      $('#totalSavings').replaceWith('<span id="totalSavings">' + totalSave + '</span>');
+	    });
+	    // FastClick.attach(document.body);
+	  });
+	} else {
+	  console.log("deviceready not executed, on the server");
+	}
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(226)))
+
+/***/ },
+/* 231 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function($) {"use strict";
@@ -36235,10 +36395,10 @@
 	      return void 0 !== a && a.toFixed(2);
 	    }, from: Number };return { create: Q };
 	});
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(229)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(226)))
 
 /***/ },
-/* 231 */
+/* 232 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
