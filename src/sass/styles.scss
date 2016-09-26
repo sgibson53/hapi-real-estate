@@ -198,7 +198,7 @@ body {
   }
 
   .kitchen-bg-wrapper {
-    height: 800pt;
+    height: auto;
     // background: url('../assets/kitchen-1.jpg') no-repeat center center;
     .home-elevator-banner {
       width: 100%;
@@ -235,7 +235,7 @@ body {
       }
 
       .contact-form-wrapper {
-        width: 800px;
+        width: auto;
         height: 600px;
         display: none;
         margin: 0 auto;
@@ -339,6 +339,111 @@ body {
     }
   }
 
+  .big-home-links {
+    font-size: 3.5em;
+    margin: 50pt 0 50pt 0;
+    width: 100%;
+    display: flex;
+
+    .link1, .link2 {
+      text-decoration: none;
+      color: $hapi-blue;
+      height: 150pt;
+      line-height: 150pt;
+
+      &:hover {
+
+      }
+
+      .big-green-hapi {
+        color: $hapi-green;
+      }
+    }
+
+    .link1 {
+      text-align: right;
+      width: 50%;
+      padding-right: 50pt;
+      padding-left: 2.5pt;
+      border-right: 5pt solid rgba(218,222,232,1);
+    }
+
+    .link2 {
+      text-align: left;
+      width: 50%;
+      padding-left: 50pt;
+    }
+  }
+
+  .footer-wrapper {
+    width: 100%;
+    height: auto;
+    display: block;
+    background: url('../assets/home-elevator-banner@2x.png') no-repeat center center;
+    border-top: 2px solid $hapi-blue;
+
+    .footer-headline {
+      display: flex;
+      justify-content: center;
+
+      .footer-headline-el {
+        padding: 0 10pt 0 0;
+        font-size: .9em;
+        line-height: 20pt;
+
+        &:last-of-type {
+          font-size: 1.5em;
+        }
+      }
+    }
+
+    .center-info {
+      margin: 20pt 50pt 20pt 50pt;
+      display: flex;
+      justify-content: center;
+
+      img {
+        margin-right: 20pt;
+      }
+
+      .line1 {
+        p {
+          display: inline-block;
+          padding: 0 10pt 0 10pt;
+          border-right: 2px solid black;
+
+          &:first-of-type {
+            padding-left: 0;
+          }
+
+          &:last-of-type {
+            border-right: none;
+          }
+        }
+      }
+
+      .line2 {
+
+        .footer-links {
+          padding-right: 15pt;
+          color: $hapi-blue;
+          text-decoration: none;
+
+          &:hover {
+          }
+        }
+      }
+    }
+
+    .copyright {
+      width: 100%;
+      margin: 0;
+      padding: 0 0 5pt 0;
+      display: block;
+      text-align: center;
+      font-size: .8em;
+    }
+  }
 
 }
 

@@ -25424,7 +25424,7 @@
 
 	var _Home2 = _interopRequireDefault(_Home);
 
-	var _Construction = __webpack_require__(232);
+	var _Construction = __webpack_require__(233);
 
 	var _Construction2 = _interopRequireDefault(_Construction);
 
@@ -25515,9 +25515,13 @@
 
 	var _ContactForm2 = _interopRequireDefault(_ContactForm);
 
+	var _Footer = __webpack_require__(230);
+
+	var _Footer2 = _interopRequireDefault(_Footer);
+
 	var _utilities = __webpack_require__(228);
 
-	var _deviceready = __webpack_require__(230);
+	var _deviceready = __webpack_require__(231);
 
 	var _deviceready2 = _interopRequireDefault(_deviceready);
 
@@ -25796,11 +25800,36 @@
 	            _react2.default.createElement(
 	              'button',
 	              { id: 'home-contact-us', onClick: self.contactUsHandler.bind(self) },
-	              'Contact Us'
+	              'Contact Us Today'
 	            ),
 	            _react2.default.createElement(_ContactForm2.default, null)
 	          )
-	        )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'big-home-links' },
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { className: 'link1 big-blue-hapi', to: '/' },
+	            'Buy ',
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'big-green-hapi' },
+	              'Hapi'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { className: 'link2 big-blue-hapi', to: '/' },
+	            'Sell ',
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'big-green-hapi' },
+	              'Hapi'
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(_Footer2.default, null)
 	      );
 	    }
 	  }]);
@@ -35902,11 +35931,150 @@
 /* 230 */
 /***/ function(module, exports, __webpack_require__) {
 
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(159);
+
+	var _utilities = __webpack_require__(228);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Footer = function (_React$Component) {
+	  _inherits(Footer, _React$Component);
+
+	  function Footer(props) {
+	    _classCallCheck(this, Footer);
+
+	    return _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).call(this, props));
+	  }
+
+	  _createClass(Footer, [{
+	    key: 'render',
+	    value: function render() {
+
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'footer-wrapper' },
+	        _react2.default.createElement(
+	          'p',
+	          { className: 'footer-headline' },
+	          _react2.default.createElement(
+	            'span',
+	            { className: 'footer-headline-el' },
+	            'We are reliable.'
+	          ),
+	          _react2.default.createElement(
+	            'span',
+	            { className: 'footer-headline-el' },
+	            'We are up front.'
+	          ),
+	          _react2.default.createElement(
+	            'span',
+	            { className: 'footer-headline-el' },
+	            'We deliver high value.'
+	          ),
+	          _react2.default.createElement(
+	            'span',
+	            { className: 'footer-headline-el' },
+	            'We are economically efficient.'
+	          ),
+	          _react2.default.createElement(
+	            'span',
+	            { className: 'footer-headline-el' },
+	            'We offer transparent service.'
+	          ),
+	          _react2.default.createElement(
+	            'span',
+	            { className: 'footer-headline-el', id: 'footer-headline-hapi' },
+	            'We are HAPI REAL ESTATE.'
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'center-info' },
+	          _react2.default.createElement('img', { src: 'http://placehold.it/80x80', className: 'img-responsive' }),
+	          _react2.default.createElement(
+	            'div',
+	            null,
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'line1' },
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                'info@hapirealestate.com'
+	              ),
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                '777-777-7777'
+	              ),
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                '123 Hapi Lane, Suite 7000, Cleveland, OH 99999'
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'line2' },
+	              _react2.default.createElement(
+	                _reactRouter.Link,
+	                { className: 'footer-links', to: '/' },
+	                'CONTACT US'
+	              ),
+	              _react2.default.createElement(
+	                _reactRouter.Link,
+	                { className: 'footer-links', to: '/' },
+	                'ABOUT US'
+	              ),
+	              _react2.default.createElement(
+	                _reactRouter.Link,
+	                { className: 'footer-links', to: '/' },
+	                'FAQ'
+	              )
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          { className: 'copyright' },
+	          'Copyright 2016 Hapi Real Estate, All Rights Reserved.'
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Footer;
+	}(_react2.default.Component);
+
+	exports.default = Footer;
+
+/***/ },
+/* 231 */
+/***/ function(module, exports, __webpack_require__) {
+
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
 
 	var _utilities = __webpack_require__(228);
 
-	var _nouisliderMin = __webpack_require__(231);
+	var _nouisliderMin = __webpack_require__(232);
 
 	var _nouisliderMin2 = _interopRequireDefault(_nouisliderMin);
 
@@ -35985,7 +36153,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(226)))
 
 /***/ },
-/* 231 */
+/* 232 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function($) {"use strict";
@@ -36398,7 +36566,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(226)))
 
 /***/ },
-/* 232 */
+/* 233 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
