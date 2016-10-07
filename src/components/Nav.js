@@ -14,7 +14,7 @@ export default class Nav extends React.Component {
     return (
       <div className="nav-wrapper">
         <nav className="main-nav">
-          <Link to="/">Buy</Link>
+          <Link to="/buy-hapi">Buy</Link>
           <Link to="/">Sell</Link>
           <Link to="/">About</Link>
         </nav>

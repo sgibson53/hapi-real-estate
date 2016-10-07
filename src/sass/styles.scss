@@ -447,6 +447,8 @@ body {
 
 }
 
+
+
 ::-webkit-input-placeholder {
   color: $hapi-blue;
   opacity: .8;
@@ -473,4 +475,12 @@ textarea::-webkit-input-placeholder {
 }
 *:focus {
   outline: none;
+}
+
+// SCS imports
+@import 'buy.scss';
+
+svg {
+    width: 100%;
+    height: 100%;
 }

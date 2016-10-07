@@ -34,7 +34,7 @@ export default class Home extends React.Component {
           <Nav />
           <div className="main-banner">
             <div className="main-logo">
-              {getSVG("../assets/icons.svg#logo-1")}
+              <Link to="/home">{getSVG("../assets/icons.svg#logo-1")}</Link>
             </div>
             <h1 className="headline">The New Full Service at a Charming Flat Fee</h1>
             <div className="main-chat-button">Chat with Hapi</div>

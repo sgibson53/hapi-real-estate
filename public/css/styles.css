@@ -2,8 +2,12 @@
 .noUi-target, .noUi-target * {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
+  -ms-touch-action: none;
   touch-action: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
   user-select: none;
+  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 .noUi-target {
@@ -31,12 +35,14 @@
   z-index: 10; }
 
 .noUi-state-tap .noUi-origin {
+  -webkit-transition: left .3s,top .3s;
   transition: left .3s,top .3s; }
 
 .noUi-state-drag * {
   cursor: inherit !important; }
 
 .noUi-base, .noUi-handle {
+  -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); }
 
 .noUi-horizontal {
@@ -64,6 +70,7 @@
 .noUi-connect {
   background: #3FB8AF;
   box-shadow: inset 0 0 3px rgba(51, 51, 51, 0.45);
+  -webkit-transition: background 450ms;
   transition: background 450ms; }
 
 .noUi-origin {
@@ -75,7 +82,7 @@
   box-shadow: inset 0 1px 1px #F0F0F0,0 3px 6px -5px #BBB; }
 
 .noUi-target.noUi-connect {
-  box-shadow: inset 0 0 3px rgba(51, 51, 51, 0.45), 0 3px 6px -5px #BBB; }
+  box-shadow: inset 0 0 3px rgba(51, 51, 51, 0.45), 0 3px 6px -5px #bbbbbb; }
 
 .noUi-draggable {
   cursor: w-resize; }
@@ -122,6 +129,7 @@
   cursor: not-allowed; }
 
 .noUi-pips, .noUi-pips * {
+  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 .noUi-pips {
@@ -151,6 +159,7 @@
   width: 100%; }
 
 .noUi-value-horizontal {
+  -webkit-transform: translate3d(-50%, 50%, 0);
   transform: translate3d(-50%, 50%, 0); }
 
 .noUi-marker-horizontal.noUi-marker {
@@ -171,6 +180,7 @@
   left: 100%; }
 
 .noUi-value-vertical {
+  -webkit-transform: translate3d(0, -50%, 0);
   transform: translate3d(0, -50%, 0);
   padding-left: 25px; }
 
@@ -306,6 +316,8 @@ input[type=checkbox], input[type=radio] {
 
 input[type=search] {
   -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   box-sizing: content-box; }
 
 input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
@@ -328,6 +340,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 /* Box-sizing border-box */
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 body {
@@ -415,13 +428,11 @@ body {
       transition: all .5s; }
       .site-wrapper .home-background-1 .main-banner .main-chat-button:hover {
         transform: rotateY(360deg); }
-
 .site-wrapper .price-slider-wrapper h3 {
   padding: 20pt 0 20pt 0;
   max-width: 80%;
   margin: auto;
   font-size: 2em; }
-
 .site-wrapper .price-slider-wrapper h4 {
   padding: 0;
   margin: auto;
@@ -429,7 +440,6 @@ body {
   text-align: center;
   height: 10px;
   font-size: 1.2em; }
-
 .site-wrapper .price-slider-wrapper #home-price-slider {
   margin: auto;
   margin-top: 20pt;
@@ -438,7 +448,6 @@ body {
   background: #7ed321; }
   .site-wrapper .price-slider-wrapper #home-price-slider .noUi-origin, .site-wrapper .price-slider-wrapper #home-price-slider .noUi-stacking {
     background: whitesmoke; }
-
 .site-wrapper .price-slider-wrapper .cost-table {
   position: relative;
   top: -40pt;
@@ -469,7 +478,6 @@ body {
   .site-wrapper .price-slider-wrapper .cost-table .you-save {
     color: #7ed321;
     font-weight: bold; }
-
 .site-wrapper .kitchen-bg-wrapper {
   height: auto; }
   .site-wrapper .kitchen-bg-wrapper .home-elevator-banner {
@@ -568,7 +576,6 @@ body {
           height: 50px; }
           .site-wrapper .kitchen-bg-wrapper .contact-us-wrapper .contact-form-wrapper .cf-footer #cf-submit:active, .site-wrapper .kitchen-bg-wrapper .contact-us-wrapper .contact-form-wrapper .cf-footer #cf-cancel:active {
             background: #b4b4b4; }
-
 .site-wrapper .big-home-links {
   font-size: 3.5em;
   margin: 50pt 0 50pt 0;
@@ -591,7 +598,6 @@ body {
     text-align: left;
     width: 50%;
     padding-left: 50pt; }
-
 .site-wrapper .footer-wrapper {
   width: 100%;
   height: auto;
@@ -658,3 +664,142 @@ textarea::-webkit-input-placeholder {
 
 *:focus {
   outline: none; }
+
+.site-wrapper .buy-background-1 {
+  background: url("../assets/brick-window.jpeg") no-repeat top center;
+  background-size: cover;
+  padding-bottom: 30px;
+  width: 100%;
+  height: auto; }
+  .site-wrapper .buy-background-1 .nav-wrapper {
+    width: 100%; }
+    .site-wrapper .buy-background-1 .nav-wrapper .main-nav {
+      position: absolute;
+      left: 50px;
+      top: 30px; }
+      .site-wrapper .buy-background-1 .nav-wrapper .main-nav a {
+        position: relative;
+        text-decoration: none;
+        color: white;
+        margin-right: 55px;
+        font-size: 1.7em;
+        text-shadow: 2px 2px 5px black; }
+        .site-wrapper .buy-background-1 .nav-wrapper .main-nav a:hover {
+          text-decoration: underline; }
+    .site-wrapper .buy-background-1 .nav-wrapper .social-icons-backdrop {
+      position: absolute;
+      top: 0;
+      right: 120px;
+      width: 235px;
+      height: 80px; }
+      .site-wrapper .buy-background-1 .nav-wrapper .social-icons-backdrop svg {
+        position: relative;
+        top: 10px;
+        width: 40px;
+        height: 40px;
+        margin-left: 15px;
+        z-index: 1;
+        transition: all .1s ease-in-out; }
+        .site-wrapper .buy-background-1 .nav-wrapper .social-icons-backdrop svg:hover {
+          transform: scale(1.2); }
+      .site-wrapper .buy-background-1 .nav-wrapper .social-icons-backdrop img {
+        position: absolute;
+        width: 235px;
+        top: 0;
+        left: 0; }
+  .site-wrapper .buy-background-1 .main-banner {
+    width: 100%;
+    margin-bottom: 200px; }
+    .site-wrapper .buy-background-1 .main-banner .main-logo {
+      text-align: center; }
+      .site-wrapper .buy-background-1 .main-banner .main-logo svg {
+        width: 260px;
+        height: 250px;
+        margin: 80px auto 0 auto; }
+    .site-wrapper .buy-background-1 .main-banner .headline {
+      text-align: center;
+      width: 80%;
+      margin: 10px auto;
+      text-shadow: 2px 2px 5px black;
+      font-size: 3.2em;
+      color: white; }
+  .site-wrapper .buy-background-1 .buy-banner {
+    display: flex;
+    justify-content: space-around;
+    margin: 100px auto 0 auto;
+    width: 100%;
+    height: auto;
+    background: url("../assets/buy-sell-banner.svg") no-repeat top center; }
+    .site-wrapper .buy-background-1 .buy-banner .message-wrapper {
+      display: table; }
+      .site-wrapper .buy-background-1 .buy-banner .message-wrapper #bb-message {
+        color: #3954a5;
+        display: table-cell;
+        font-size: 1.5em;
+        width: 550px;
+        height: 200px;
+        vertical-align: middle; }
+    .site-wrapper .buy-background-1 .buy-banner h2 {
+      font-size: 4em; }
+      .site-wrapper .buy-background-1 .buy-banner h2 span:first-child {
+        color: #3954a5;
+        padding-right: 20px; }
+      .site-wrapper .buy-background-1 .buy-banner h2 span:nth-child(2) {
+        color: #7ed321; }
+  .site-wrapper .buy-background-1 .dont-settle {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    padding: 15px 10% 15px 10%;
+    margin: 300px 0 10px 0; }
+    .site-wrapper .buy-background-1 .dont-settle #ds-title {
+      font-size: 3em;
+      margin: 0 50px 0 50px; }
+    .site-wrapper .buy-background-1 .dont-settle .ds-message {
+      font-size: 1.2em;
+      padding: 30px 100px 10px 100px;
+      margin: 0; }
+.site-wrapper .support-team {
+  width: 100%;
+  height: 800px;
+  margin: auto; }
+  .site-wrapper .support-team .pics {
+    width: 800px;
+    height: 500px;
+    margin: 100px auto 100px auto;
+    position: relative; }
+    .site-wrapper .support-team .pics .pic {
+      position: absolute;
+      display: block;
+      border: 1px solid #3954a5;
+      width: 200px;
+      height: 200px;
+      background: #7ed321; }
+    .site-wrapper .support-team .pics #cool1 {
+      z-index: 1;
+      left: 130px; }
+      .site-wrapper .support-team .pics #cool1:hover {
+        left: 90px; }
+    .site-wrapper .support-team .pics #cool2 {
+      z-index: 2;
+      left: 300px; }
+      .site-wrapper .support-team .pics #cool2:hover {
+        left: 260px; }
+    .site-wrapper .support-team .pics #cool3 {
+      z-index: 3;
+      left: 470px; }
+      .site-wrapper .support-team .pics #cool3:hover {
+        left: 430px; }
+    .site-wrapper .support-team .pics .comment-box1 {
+      display: block;
+      position: absolute;
+      left: 80px;
+      padding-top: 210px;
+      width: 700px;
+      height: 600px; }
+
+svg {
+  width: 100%;
+  height: 100%; }

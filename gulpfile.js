@@ -52,7 +52,7 @@ gulp.task('default', function() {
 
   gulp.run('server');
 
-	gulp.watch('./src/sass/styles.scss', ['sass'], function() {
+	gulp.watch('./src/sass/*.scss', ['sass'], function() {
 		gulp.run('server');
 	});
 	gulp.watch('./src/**/*.js', ['webpack'], function() {

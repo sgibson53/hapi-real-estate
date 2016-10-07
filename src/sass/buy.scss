@@ -1,0 +1,197 @@
+.site-wrapper {
+  .buy-background-1 {
+    background: url('../assets/brick-window.jpeg') no-repeat top center;
+    background-size: cover;
+    padding-bottom: 30px;
+    width: 100%;
+    height: auto;
+
+    .nav-wrapper {
+      width: 100%;
+
+      .main-nav {
+        position: absolute;
+        left: 50px;
+        top: 30px;
+
+        a {
+          position: relative;
+          text-decoration: none;
+          color: white;
+          margin-right: 55px;
+          font-size: 1.7em;
+          text-shadow: 2px 2px 5px black;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .social-icons-backdrop {
+        position: absolute;
+        top: 0;
+        right: 120px;
+        width: 235px;
+        height: 80px;
+
+        svg {
+          position: relative;
+          top: 10px;
+          width: 40px;
+          height: 40px;
+          margin-left: 15px;
+          z-index: 1;
+          transition: all .1s ease-in-out;
+
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+
+        img {
+          position: absolute;
+          width: 235px;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+
+    .main-banner {
+      width: 100%;
+      margin-bottom: 200px;
+
+      .main-logo {
+        text-align: center;
+
+          svg {
+            width: 260px;
+            height: 250px;
+            margin: 80px auto 0 auto;
+          }
+        }
+
+        .headline {
+          text-align: center;
+          width: 80%;
+          margin: 10px auto;
+          text-shadow: 2px 2px 5px black;
+          font-size: 3.2em;
+          color: white;
+        }
+      }
+
+      .buy-banner {
+        display: flex;
+        justify-content: space-around;
+        margin: 100px auto 0 auto;
+        width: 100%;
+        height: auto;
+        background: url('../assets/buy-sell-banner.svg') no-repeat top center;
+
+        .message-wrapper {
+          display: table;
+
+          #bb-message {
+            color: $hapi-blue;
+            display: table-cell;
+            font-size: 1.5em;
+            width: 550px;
+            height: 200px;
+            vertical-align: middle;
+          }
+        }
+
+
+
+        h2 {
+          font-size: 4em;
+          span:first-child {
+            color: $hapi-blue;
+            padding-right: 20px;
+          }
+          span:nth-child(2) {
+            color: $hapi-green;
+          }
+        }
+      }
+
+      .dont-settle {
+        display: block;
+        width: 100%;
+        height: auto;
+        background: rgba(0,0,0,.3);
+        color: rgba(255,255,255,1);
+        padding: 15px 10% 15px 10%;
+        margin: 300px 0 10px 0;
+        #ds-title {
+          font-size: 3em;
+          margin: 0 50px 0 50px;
+        }
+        .ds-message {
+          font-size: 1.2em;
+          padding: 30px 100px 10px 100px;
+          margin: 0;
+        }
+      }
+    }
+
+    .support-team {
+      width: 100%;
+      height: 800px;
+      margin: auto;
+
+
+      .pics {
+        width: 800px;
+        height: 500px;
+        margin: 100px auto 100px auto;
+        position: relative;
+
+        .pic {
+          position: absolute;
+          display: block;
+          border: 1px solid $hapi-blue;
+          width: 200px;
+          height: 200px;
+          background: $hapi-green;
+        }
+
+        #cool1 {
+          z-index: 1;
+          left: 130px;
+          &:hover {
+            left: 90px;
+          }
+        }
+
+        #cool2 {
+          z-index: 2;
+          left: 300px;
+          &:hover {
+            left: 260px;
+          }
+        }
+
+        #cool3 {
+          z-index: 3;
+          left: 470px;
+          &:hover {
+            left: 430px;
+          }
+        }
+
+        .comment-box1 {
+          display: block;
+          position: absolute;
+          left: 80px;
+          padding-top: 210px;
+          width: 700px;
+          height: 600px;
+        }
+      }
+
+
+    }
+}

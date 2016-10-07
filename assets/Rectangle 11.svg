@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="947px" height="451px" viewBox="0 0 947 451" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.2 (33826) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle 11</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M1130,1331.99015 C1130,1327.57731 1133.57839,1324 1137.99172,1324 L1229.71721,1324 L1225.69409,1273.09281 L1278.55924,1324 L1331.93754,1324 C1331.93754,1324 1355.57883,1324.02492 1367.86861,1324 C1396.27835,1323.94239 1426.17361,1324.09061 1456.29609,1324 C1523.80416,1323.79692 1593.71594,1324.07519 1663.4022,1324 C1875.51758,1323.77114 2069.00632,1323.99168 2069.00632,1323.99168 C2073.42111,1323.99627 2077,1327.58021 2077,1331.99015 L2077,1716.00985 C2077,1720.42269 2073.41634,1724 2068.99147,1724 L1138.00853,1724 C1133.58554,1724 1130,1720.41979 1130,1716.00985 L1130,1331.99015 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="947" height="450.907191" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Scratch-Pad" transform="translate(-1130.000000, -1273.000000)" stroke="#979797" stroke-width="2" fill="#DBDFE9">
+            <use id="Rectangle-11" mask="url(#mask-2)" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>

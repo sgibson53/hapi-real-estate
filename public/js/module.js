@@ -25424,7 +25424,11 @@
 
 	var _Home2 = _interopRequireDefault(_Home);
 
-	var _Construction = __webpack_require__(233);
+	var _Buy = __webpack_require__(233);
+
+	var _Buy2 = _interopRequireDefault(_Buy);
+
+	var _Construction = __webpack_require__(234);
 
 	var _Construction2 = _interopRequireDefault(_Construction);
 
@@ -25436,7 +25440,8 @@
 	  _react2.default.createElement(_reactRouter.Redirect, { from: '/', to: '/construction' }),
 	  _react2.default.createElement(_reactRouter.Route, { path: '/construction', component: _Construction2.default }),
 	  _react2.default.createElement(_reactRouter.Redirect, { from: '/beta', to: '/home', component: _Home2.default }),
-	  _react2.default.createElement(_reactRouter.Route, { path: '/home', component: _Home2.default })
+	  _react2.default.createElement(_reactRouter.Route, { path: '/home', component: _Home2.default }),
+	  _react2.default.createElement(_reactRouter.Route, { path: '/buy-hapi', component: _Buy2.default })
 	);
 
 /***/ },
@@ -25570,7 +25575,11 @@
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'main-logo' },
-	              (0, _utilities.getSVG)("../assets/icons.svg#logo-1")
+	              _react2.default.createElement(
+	                _reactRouter.Link,
+	                { to: '/home' },
+	                (0, _utilities.getSVG)("../assets/icons.svg#logo-1")
+	              )
 	            ),
 	            _react2.default.createElement(
 	              'h1',
@@ -35709,7 +35718,7 @@
 	          { className: 'main-nav' },
 	          _react2.default.createElement(
 	            _reactRouter.Link,
-	            { to: '/' },
+	            { to: '/buy-hapi' },
 	            'Buy'
 	          ),
 	          _react2.default.createElement(
@@ -36567,6 +36576,170 @@
 
 /***/ },
 /* 233 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function($) {'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(159);
+
+	var _Nav = __webpack_require__(227);
+
+	var _Nav2 = _interopRequireDefault(_Nav);
+
+	var _Footer = __webpack_require__(230);
+
+	var _Footer2 = _interopRequireDefault(_Footer);
+
+	var _utilities = __webpack_require__(228);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Home = function (_React$Component) {
+	  _inherits(Home, _React$Component);
+
+	  function Home(props) {
+	    _classCallCheck(this, Home);
+
+	    return _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).call(this, props));
+	  }
+
+	  _createClass(Home, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {}
+	  }, {
+	    key: 'contactUsHandler',
+	    value: function contactUsHandler(e) {
+	      $('#home-contact-us').slideUp(400, function () {
+	        $('.contact-form-wrapper').slideDown(600);
+	      });
+	    }
+	  }, {
+	    key: 'picHandler',
+	    value: function picHandler(e) {
+	      console.log(e.target);
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var self = this;
+
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'site-wrapper' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'buy-background-1' },
+	          _react2.default.createElement(_Nav2.default, null),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'main-banner' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'main-logo' },
+	              _react2.default.createElement(
+	                _reactRouter.Link,
+	                { to: '/home' },
+	                (0, _utilities.getSVG)("../assets/icons.svg#logo-1")
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'h1',
+	              { className: 'headline' },
+	              'The New Full Service at a Charming Flat Fee'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'buy-banner' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'message-wrapper' },
+	              _react2.default.createElement(
+	                'p',
+	                { id: 'bb-message' },
+	                'We believe in being committed, transparent, and honest throughout the buying and selling processes. Hapi leverages technology, networking, and experience to sell your home quickly and conveniently. '
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'h2',
+	              null,
+	              _react2.default.createElement(
+	                'span',
+	                null,
+	                'Sell'
+	              ),
+	              _react2.default.createElement(
+	                'span',
+	                null,
+	                'Hapi'
+	              )
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'dont-settle' },
+	            _react2.default.createElement(
+	              'p',
+	              { id: 'ds-title' },
+	              'Don\'t Settle'
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              { className: 'ds-message' },
+	              'Every house needs the same quality effort and care to be sold, so why do Real Estate companies charge 3% commission on everything? Because they know they can.'
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              { className: 'ds-message' },
+	              'We’re better than that, and your experience means a lot more to us. Our full ‘Sell Hapi’ service provides everything you need from start to finish at one low fee - $3,500. No games. Just a great selling experience.'
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'support-team' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'pics' },
+	            _react2.default.createElement('div', { id: 'cool1', className: 'pic', onClick: self.picHandler.bind(self) }),
+	            _react2.default.createElement('div', { id: 'cool2', className: 'pic', onClick: self.picHandler.bind(self) }),
+	            _react2.default.createElement('div', { id: 'cool3', className: 'pic', onClick: self.picHandler.bind(self) }),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'comment-box1' },
+	              (0, _utilities.getSVG)("../assets/icons.svg#talk-box")
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(_Footer2.default, null)
+	      );
+	    }
+	  }]);
+
+	  return Home;
+	}(_react2.default.Component);
+
+	exports.default = Home;
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(226)))
+
+/***/ },
+/* 234 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
